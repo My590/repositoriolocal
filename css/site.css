@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+    background-color: #52B6B0;
+    margin-top: 0.01%;
+    height: 90px;
+}
+
+html {
+    font-size: 62.5%;
+    color: #ffffff;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../home_img.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Coloca a imagem atrás do conteúdo */
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Ajuste a opacidade aqui */
+    z-index: -1;
+    /* Coloca a camada escura atrás do conteúdo */
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-right: 2rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.conta {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    position: absolute;
+    /* Posiciona em relação ao seu pai */
+    right: 40px;
+    /* Alinha à direita */
+    top: 45px;
+    /* Alinha ao topo */
+    padding: 20px;
+    /* Adiciona algum espaçamento */
+}
+
+.foto {
+    border-radius: 100%;
+    padding: 10px;
+    /* Adiciona algum espaçamento */
+}
+
+
+.home .home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: rgb(255, 255, 255);
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    display: flex;
+    /* Adicionado para alinhar o cursor */
+    align-items: center;
+    /* Centraliza o texto e o cursor verticalmente */
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    border: 0.2rem solid rgb(255, 255, 255);
+    background-color: transparent;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: rgb(255, 255, 255);
+}
+
+.social-icons a:hover {
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    background-color: #52B6B0;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px;
+    color: black;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    position: relative;
+    /* Adicionado para o cursor */
+}
+
+.typing-text span::before {
+    content: "Software Developer";
+    /* Texto padrão */
+    color: rgb(45, 190, 209);
+    margin-left: 1rem;
+    animation: words 20s infinite;
+    /* Animação do texto */
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 8px;
+    /* Largura do cursor */
+    height: 100%;
+    border-left: 3px solid rgb(255, 255, 255);
+    /* Cor do cursor */
+    margin-left: 10px;
+    /* Espaçamento entre o texto e o cursor */
+    animation: cursor 1s infinite;
+    /* Animação do cursor */
+}
+
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: " as hortas";
+    }
+
+    21%,
+    40% {
+        content: " a sustentabilidade";
+    }
+
+    41%,
+    60% {
+        content: "o novo";
+    }
+
+    61%,
+    80% {
+        content: " a conscientização";
+    }
+
+    81%,
+    100% {
+        content: "o bioplastico";
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+        /* Inicia visível */
+    }
+
+    50% {
+        opacity: 0;
+        /* Invisível */
+    }
+
+    100% {
+        opacity: 1;
+        /* Visível novamente */
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}
+
+.logo-img {
+    height: 70px;
+    /* Ajuste a altura conforme necessário */
+    margin-right: 1rem;
+    /* Espaçamento entre a logo e o texto */
+}

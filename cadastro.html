@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="js/cadastro.js" defer></script>
+</head>
+<body>
+
+    <!-- Tela de Cadastro -->
+    <div id="register-form" class="form-container" style="align-items: center;">
+        <h2>Cadastro</h2>
+        <input type="text" id="username" placeholder="Nome de usuário" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button onclick="register()">Cadastrar</button>
+        <p id="register-message"></p>
+        <p>Já tem uma conta? <a href="javascript:void(0)" onclick="showLoginForm()">Faça login</a></p>
+    </div>
+
+    <!-- Tela de Login -->
+    <div id="login-form" class="form-container hidden">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="E-mail" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button onclick="login()">Entrar</button>
+        <p id="login-message"></p>
+        <p>Esqueceu sua senha? <a href="javascript:void(0)" onclick="showRecoveryForm()">Recuperar senha</a></p>
+        <p>Ainda não tem uma conta? <a href="javascript:void(0)" onclick="showRegisterForm()">Cadastre-se</a></p>
+    </div>
+
+    <!-- Tela de Recuperação de Senha -->
+    <div id="recovery-form" class="form-container hidden">
+        <h2>Recuperação de Senha</h2>
+        <input type="email" id="recovery-email" placeholder="Digite seu e-mail" required>
+        <input type="text" id="recovery-code" placeholder="Digite o código de segurança" required>
+        <button onclick="verifySecurityCode()">Recuperar</button>
+        <p id="recovery-message"></p>
+        <p>Voltar para o <a href="javascript:void(0)" onclick="showLoginForm()">Login</a></p>
+    </div>
+
+    <!-- Tela para Definir Nova Senha -->
+    <div id="new-password-form" class="form-container hidden">
+        <h2>Defina sua nova senha</h2>
+        <input type="password" id="new-password" placeholder="Nova Senha" required>
+        <input type="password" id="confirm-password" placeholder="Confirmar Nova Senha" required>
+        <button onclick="updatePassword()">Atualizar Senha</button>
+        <p id="new-password-message"></p>
+        <p>Voltar para o <a href="javascript:void(0)" onclick="showLoginForm()">Login</a></p>
+    </div>
+
+</head>
+
+<body>
+    <header class="layout">
+        <img src="branca.png" alt="Logo" class="logo-img" width="55" height="55">
+        <a href="#" class="logo"> Industria Limpa</a>
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="destaque.html"> Destaques </a>
+            <a href="sobresite.html"> Sobre</a>
+            <a href="assinar.html"> Assinar </a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <nav class="conta">
+
+            </div>
+           
+        </nav>
+        <div class="home-content">
+    </section>
+</body>
+
+</html>

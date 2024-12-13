@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+    background-color: #52B6B0;
+    margin-top: 0.01%;
+    height: 90px;
+    z-index: 10;
+    position: relative;
+}
+
+html {
+    font-size: 60%;
+    color: #ffffff;
+}
+
+html, body {
+height: 100%; /* Garante que o body e html ocupem toda a altura da tela */
+margin: 0; /* Remove margens extras */
+}
+
+body::before {
+content: '';
+position: fixed; /* Usa fixed para que a imagem permaneça fixada no fundo */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; /* Garante que a imagem ocupe toda a altura da tela */
+background-image: url("../destaque_img.jpg");
+background-size: cover; /* Garante que a imagem cubra toda a área */
+background-position: center; /* Centraliza a imagem */
+z-index: -2; /* Coloca a imagem atrás da camada preta */
+}
+
+body::after {
+content: '';
+position: fixed; /* Garantir que o fundo preto fique fixado na tela */
+top: 0;
+left: 0;
+width: 100%; /* Abarca toda a largura da tela */
+height: 100%; /* Abarca toda a altura da tela */
+background-color: rgba(0, 0, 0, 0.1); /* Fundo preto com opacidade */
+z-index: -1; /* Coloca o fundo preto atrás dos outros conteúdos */
+}
+
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-right: 2rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.home {
+    position: relative;
+    margin-top: 0.5px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding: 10px;
+    transition: all 0.3s ease; /* Animação para transição */
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 1.4rem;
+    transition: width 0.3s ease, padding 0.3s ease; /* Animação para transição */
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: all 0.3s ease; /* Animação para transição */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card-deck p {
+    font-size: 2cap;
+}
+
+.logo-img {
+    height: 70px;
+    margin-right: 1rem;
+}

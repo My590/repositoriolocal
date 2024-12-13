@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+    background-color: #52B6B0;
+    margin-top: 0.1%;
+    height: 90px;
+}
+
+html {
+    font-size: 62.5%;
+    color: #ffffff;
+}
+
+html, body {
+height: 100%; /* Garante que o body e html ocupem toda a altura da tela */
+margin: 0; /* Remove margens extras */
+}
+
+body::before {
+content: '';
+position: fixed; /* Usa fixed para que a imagem permaneça fixada no fundo */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; /* Garante que a imagem ocupe toda a altura da tela */
+background-image: url("../fundo.mensal.jpg");
+background-size: cover; /* Garante que a imagem cubra toda a área */
+background-position: center; /* Centraliza a imagem */
+z-index: -2; /* Coloca a imagem atrás da camada preta */
+}
+
+body::after {
+content: '';
+position: fixed; /* Garantir que o fundo preto fique fixado na tela */
+top: 0;
+left: 0;
+width: 100%; /* Abarca toda a largura da tela */
+height: 100%; /* Abarca toda a altura da tela */
+background-color: rgba(0, 0, 0, 0.6); /* Fundo preto com opacidade */
+z-index: -1; /* Coloca o fundo preto atrás dos outros conteúdos */
+}
+
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-right: 2rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+section {
+    margin: 80px 30px;
+    background-color: #0E0D27;
+    height: 650px;
+    width: 450px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+span {
+    color: #52B6B0;
+}
+
+h3 {
+    font-size:2.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align:start;
+    margin: 30px 0;
+}
+
+.payment-content p {
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    background-color: #52B6B0;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    color: #0E0D27;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px;
+    color: black;
+}
+
+.logo-img {
+    height: 70px;
+    margin-right: 1rem;
+}

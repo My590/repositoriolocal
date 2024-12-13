@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+    background-color: #52B6B0;
+    margin-top: 0.01%;
+    height: 90px;
+    z-index: 10;
+    position: relative;
+}
+
+html {
+    font-size: 60%;
+    color: #ffffff;
+}
+
+html, body {
+height: 100%; /* Garante que o body e html ocupem toda a altura da tela */
+margin: 0; /* Remove margens extras */
+}
+
+body::before {
+content: '';
+position: fixed; /* Usa fixed para que a imagem permaneça fixada no fundo */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; /* Garante que a imagem ocupe toda a altura da tela */
+background-image: url("../destaque_img.jpg");
+background-size: cover; /* Garante que a imagem cubra toda a área */
+background-position: center; /* Centraliza a imagem */
+z-index: -2; /* Coloca a imagem atrás da camada preta */
+}
+
+body::after {
+content: '';
+position: fixed; /* Garantir que o fundo preto fique fixado na tela */
+top: 0;
+left: 0;
+width: 100%; /* Abarca toda a largura da tela */
+height: 100%; /* Abarca toda a altura da tela */
+background-color: rgba(0, 0, 0, 0.1); /* Fundo preto com opacidade */
+z-index: -1; /* Coloca o fundo preto atrás dos outros conteúdos */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-right: 2rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    position: absolute;
+    right: 70px;
+    top: 0;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 2cap;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 2cap;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.logo-img {
+    height: 70px;
+    margin-right: 1rem;
+}
+
+.card-tittle {
+    background-color: white;
+    height: 50px;
+    width: auto;
+    border-radius: 35px;
+}
+
+.card-text {
+    font-size: medium;
+}
+
+h2 {
+    margin: 2%;
+    font-weight: 600;
+}
+
+/* Efeito de diminuição do card */
+.small {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+/* Adiciona uma sombra leve para destacar os cards */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

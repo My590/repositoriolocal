@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> anual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/anual.css">
+    <script src="js/anual.js"></script>
+</head>
+
+<body>
+    <header class="layout">
+        <img src="branca.png" alt="Logo" class="logo-img">
+        <a href="#" class="logo"> Industria Limpa</a>
+        <nav>
+            <a href="site.html"> Home</a>
+            <a href="destaque.html"> Destaques</a>
+            <a href="sobresite.html"> Sobre</a>
+            <a href="assinar.html" class="active"> Assinar </a>
+        </nav>
+    </header>
+
+    <div class="payment">
+        <section>
+            <div class="payment-content">
+                <h3>  Plano anual (47,88 R$/ano)</h3>
+                <p> Preencha os dados abaixo</p>
+
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cartao">Número do Cartão</label>
+                    <input type="text" id="cartao" name="cartao" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="vencimento">Data de Vencimento</label>
+                    <input type="text" id="vencimento" name="vencimento" placeholder="MM/AAAA" required>
+                </div>
+
+                </div>
+                
+                <button class="btn" onclick="confirmarPagamento()">Confirmar Pagamento</button>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
